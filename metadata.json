@@ -1,0 +1,5 @@
+{
+  "name": "streekhook - Realtime Quiz Platform",
+  "description": "A fun, Kahoot-style quiz platform where hosts create games with a code and participants join with funny avatars. Features 15-second timed questions and a dynamic leaderboard.",
+  "requestFramePermissions": []
+}
