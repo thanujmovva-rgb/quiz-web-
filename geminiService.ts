@@ -2,9 +2,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Question } from "./types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export async function generateQuiz(topic: string): Promise<Question[]> {
+  // Initialize inside the function to avoid global scope execution issues
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  
   const response = await ai.models.generateContent({
     model: "gemini-3-flash-preview",
     contents: `Generate 5 multiple-choice questions about "${topic}". 
